@@ -1,16 +1,15 @@
 import random
 nums= []
 def find_missing_nums(nums):
-    n= int(input())
-    for i in range(n):
+    n= int(input('Введите длину и диапазон списка '))
+    for indexy in range(n):
         I = random.randint(1, n)
         nums.append(I)
-    nums1= []
-    for i in range(1,n+1):
-        nums1.append(i)
-    a=set(nums1)
-    b=set(nums)
-    res = [x for x in nums1 + nums if x not in nums1 or x not in nums]
-    return(res)
+    nums_so_vsemi_chislami = []
+    for drugie_indexy in range(1,n+1):
+        nums_so_vsemi_chislami.append(drugie_indexy)
+    resultat_sravnenija = [x for x in nums_so_vsemi_chislami + nums if x not in nums]
+    print(nums)
+    print(nums_so_vsemi_chislami)
+    return(resultat_sravnenija)
 print(find_missing_nums(nums))
-
